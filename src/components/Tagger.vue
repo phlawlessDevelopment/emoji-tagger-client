@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex w-full h-full flex-col justify-center items-center gap-12 text-6xl"
+    class="flex w-full h-full flex-col justify-center items-center gap-12 text-6xl pt-8"
   >
-    <div>Tag some enoji</div>
+    <div>Tag some emoji</div>
     <div
       class="flex flex-row gap-4 flex-wrap items-center justify-center w-10/12"
     >
@@ -76,7 +76,7 @@ export default {
   },
   mounted() {
     const types = document.getElementById("types");
-    
+
     fetch(
       `https://emojitagger.pythonanywhere.com/api/emoji/?count=${this.count}&types=${types.value}`
     )
