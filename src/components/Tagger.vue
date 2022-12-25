@@ -78,7 +78,7 @@ export default {
     const types = document.getElementById("types");
     
     fetch(
-      `http://emojitagger.pythonanywhere.com//api/emoji/?count=${this.count}&types=${types.value}`
+      `https://emojitagger.pythonanywhere.com/api/emoji/?count=${this.count}&types=${types.value}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -94,7 +94,7 @@ export default {
         this.count = event.target.value;
       }
       fetch(
-        `http://emojitagger.pythonanywhere.com//api/emoji/?count=${this.count}&types=${types.value}`
+        `https://emojitagger.pythonanywhere.com/api/emoji/?count=${this.count}&types=${types.value}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -142,7 +142,7 @@ export default {
           tags: tags,
         };
 
-        fetch(`http://emojitagger.pythonanywhere.com//api/emoji/`, {
+        fetch(`https://emojitagger.pythonanywhere.com/api/emoji/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
